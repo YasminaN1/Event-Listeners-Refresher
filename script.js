@@ -53,19 +53,17 @@ document.getElementById('btnClear').addEventListener('click', () => {
    - Add event listeners for mouseenter and mouseleave on the card
    - On mouseenter: add a highlight class, increase the counter, and show the count in #out
    - On mouseleave: remove the highlight class and show a message in #out
-
-   Option B — Scroll Progress Bar
-   - Add a small Bootstrap progress bar element at the very top of the page
-   - Select the inner bar element
-   - Write a function that calculates % scrolled
-     (current scroll position ÷ total scrollable height)
-   - Update the width of the bar with that percentage
-   - Run this function when the page loads and on every scroll event
-
-   Option C — Live Input Mirror
-   - Add a text input element to the page
-   - On every keystroke: update #out with a message that includes the input value
-   - If the input is empty: show a neutral placeholder message instead
-   - On focus: add a border/shadow class to the input
-   - On blur: remove those classes and make sure #out shows the right message
 ================================================== */
+let hoverCount = 0
+const hoverCard = document.getElementById('dblCard')
+
+hoverCard.addEventListener('mouseenter', () => {
+  hoverCard.classList.add('activated')
+  hoverCount++
+  render(`<p>You have hovered over this card ${hoverCount} time(s).</p>`)
+})
+
+hoverCard.addEventListener('mouseleave', () => {
+  hoverCard.classList.remove('activated')
+  render('<p>Mouse has left the card.</p>')
+})

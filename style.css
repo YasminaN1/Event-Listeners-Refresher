@@ -1,89 +1,115 @@
-:root{
-  --bs-primary:#b45309;   /* burnt orange */
-  --bs-secondary:#78350f; /* chestnut brown */
-  --bs-info:#d97706;      /* amber */
-  --bs-danger:#dc2626;    /* deep red */
-  --bs-success:#15803d;   /* earthy green */
-  --bs-body-bg:#fff7ed;   /* light fall cream */
-  --bs-body-color:#431407;/* dark brown */
-}
+   body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-image: url('https://wallpapers.com/images/hd/crystal-clear-water-hd-z0b98p0zll5dbx8j.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+  :root {
+            --bs-primary: #0ea5e9;    
+            --bs-secondary: #06b6d4;  
+            --bs-info: #f59e0b;        
+            --bs-danger: #ef4444;      
+            --bs-success: #10b981;     
+            --bs-body-bg: #f0f9ff;     
+            --bs-body-color: #0c4a6e;  
+        }
 
-body{
-  background:var(--bs-body-bg);
-  color:var(--bs-body-color);
-  min-height:100vh;
-}
 
-header{
-  background:linear-gradient(120deg,var(--bs-primary),var(--bs-secondary));
-}
 
-/* Output box */
-#out{
-  min-height:8rem;
-  background-color:#fef3c7; /* warm tan */
-}
+        header {
+            background: linear-gradient(120deg, var(--bs-primary), var(--bs-secondary));
+        }
 
-/* Hover highlight for the dblclick card (very visible) */
-.hoverable{
-  transition:box-shadow .15s ease, transform .05s ease, background-color .15s ease, border-color .15s ease;
-}
-.hoverable.activated{
-  background-color:#fee2e2;            /* light red background */
-  border:2px solid #dc2626;            /* deep red border */
-  box-shadow:0 0 0 0.25rem rgba(220,38,38,.25);
-  transform:translateY(-2px);
-}
+        /* Output box */
+        #out {
+            min-height: 8rem;
+            background-color: #fef3c7; 
+        }
 
-/* Distinct fall-colored buttons */
-#btnClick{
-  background-color:#b45309; border-color:#9a3412; color:#fff;
-}
-#btnClick:hover{ background-color:#9a3412; }
+       
+        .hoverable {
+            transition: box-shadow .15s ease, transform .05s ease, background-color .15s ease, border-color .15s ease;
+        }
 
-#btnTime{
-  background-color:#d97706; border-color:#b45309; color:#fff;
-}
-#btnTime:hover{ background-color:#b45309; }
+        .hoverable.activated {
+            background-color: #fef3c7;            
+            border: 2px solid #f59e0b;            
+            box-shadow: 0 0 0 0.25rem rgba(245, 158, 11, .25);
+            transform: translateY(-2px);
+        }
 
-#btnClear{
-  background-color:#dc2626; border-color:#991b1b; color:#fff;
-}
-#btnClear:hover{ background-color:#991b1b; }
+       
+        #btnClick {
+            background-color: #0ea5e9;
+            border-color: #0284c7;
+            color: #fff;
+        }
 
-/* Keypress monitor styling */
-.keybox{
-  background:#fff;
-  border:1px solid #e5e7eb;
-  border-radius:.5rem;
-  padding:1rem;
-  display:grid;
-  gap:.5rem;
-}
-.kb-row{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:.5rem .75rem;
-  border:1px dashed #e5e7eb;
-  border-radius:.375rem;
-  background:#fffaf0; /* light warm bg */
-}
-.kb-label{
-  text-transform:uppercase;
-  font-size:.75rem;
-  letter-spacing:.08em;
-  color:#78350f;
-}
-.kb-value{
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  font-weight:700;
-  font-size:1.125rem;
-  color:#111827;
-}
-.kb-hint{
-  font-size:.875rem;
-  color:#6b7280;
-  text-align:center;
-  margin-top:.25rem;
-}
+        #btnClick:hover {
+            background-color: #0284c7;
+        }
+
+        #btnTime {
+            background-color: #f59e0b;
+            border-color: #d97706;
+            color: #fff;
+        }
+
+        #btnTime:hover {
+            background-color: #d97706;
+        }
+
+        #btnClear {
+            background-color: #10b981;
+            border-color: #059669;
+            color: #fff;
+        }
+
+        #btnClear:hover {
+            background-color: #059669;
+        }
+
+        
+        .keybox {
+            background: #fff;
+            border: 1px solid #e0f2fe;
+            border-radius: .5rem;
+            padding: 1rem;
+            display: grid;
+            gap: .5rem;
+        }
+
+        .kb-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: .5rem .75rem;
+            border: 1px dashed #bae6fd;
+            border-radius: .375rem;
+            background: #f0f9ff; 
+        }
+
+        .kb-label {
+            text-transform: uppercase;
+            font-size: .75rem;
+            letter-spacing: .08em;
+            color: #0c4a6e;
+        }
+
+        .kb-value {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            font-weight: 700;
+            font-size: 1.125rem;
+            color: #111827;
+        }
+
+        .kb-hint {
+            font-size: .875rem;
+            color: #64748b;
+            text-align: center;
+            margin-top: .25rem;
+        }
